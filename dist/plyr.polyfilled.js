@@ -5285,7 +5285,7 @@ typeof navigator === "object" && (function (global, factory) {
       var update = true; // If function, run it and use output
 
       if (is$1.function(this.config.controls)) {
-        this.config.controls = this.config.controls.call(this.props);
+        this.config.controls = this.config.controls.call(this, props);
       } // Convert falsy controls to empty array (primarily for empty strings)
 
 
@@ -8445,7 +8445,7 @@ typeof navigator === "object" && (function (global, factory) {
 
               case 1:
                 // Restore paused state (YouTube starts playing on seek if the video hasn't been played yet)
-                if (player.media.paused && !player.embed.hasPlayed) {
+                if (player.media.paused && !player.embed.hasPlayed && !player.config.autoplay) {
                   player.media.pause();
                 } else {
                   assurePlaybackState$1.call(player, true);

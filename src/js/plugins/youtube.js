@@ -224,7 +224,7 @@ const youtube = {
                     };
 
                     player.media.duration = instance.getDuration();
-                    player.media.paused = true;
+                    player.media.paused = !player.config.autoplay;
 
                     // Seeking
                     player.media.currentTime = 0;

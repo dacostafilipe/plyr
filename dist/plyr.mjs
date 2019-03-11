@@ -6045,7 +6045,7 @@ var youtube = {
           };
 
           player.media.duration = instance.getDuration();
-          player.media.paused = true; // Seeking
+          player.media.paused = !player.config.autoplay; // Seeking
 
           player.media.currentTime = 0;
           Object.defineProperty(player.media, 'currentTime', {

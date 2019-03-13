@@ -72,6 +72,10 @@
         transform: translateY(-50%);
     }
 
+    &.plyr--youtube .plyr__video-wrapper{
+        padding-bottom: 0 !important;
+    }
+
     // Display correct icon
     .plyr__control .icon--exit-fullscreen {
         display: block;
